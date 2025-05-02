@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-m-around-small">
+        <template if:true={address}>
+                <div class="slds-grid slds-wrap slds-m-top_small">
+                    <div class="slds-col slds-size_1-of-2">
+                    <lightning-formatted-address
+                    street={address.Street__c} 
+                        city={address.City__c}
+                        country={address.Country__c} 
+                        postal-code={address.Postal_Code__c} 
+                        province={address.State__c}
+                        disabled
+                ></lightning-formatted-address>
+                <br/>
+                <lightning-button variant="brand" label="Deliver Here" onclick={handleSelect}></lightning-button>
+                </div>  
+            </div>
+        </template>
+    </div>
+</template>

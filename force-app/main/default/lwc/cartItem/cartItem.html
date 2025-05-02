@@ -1,0 +1,35 @@
+<template>
+    <div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 slds-m-top_small">
+                <a href="JavaScript:void(0);">
+                    {item.Beer__r.Name}
+                </a>
+            </div>
+
+            <div class="slds-col slds-size_1-of-4 slds-m-top_small">
+                <lightning-formatted-number 
+                    currency-code="USD"
+                    format-style="currency"
+                    currency-display-as="symbol"
+                    maximum-fraction-digits="2"
+                    value={item.Item_Amount__c} >
+                </lightning-formatted-number>
+            </div>
+            <div class="slds-col slds-size_1-of-4">
+                <lightning-input type="number" 
+                    value={item.Item_Quantity__c} 
+                    min="1"
+                    step="1"
+                >
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-4 slds-p-left_x-large slds-m-top_small">
+                <lightning-button value="Delete" label="Delete" icon-name="action:delete" 
+                        variant="destructive" onclick={handleDelete}>
+
+                </lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

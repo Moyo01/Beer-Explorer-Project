@@ -1,0 +1,78 @@
+<template>
+    <lightning-card title="Order Detail" icon-name="custom:custom65">
+        <div class="slds-m-around_small">
+            <template if:true={orderInfo}>
+                <p>
+                    <strong> Order No: </strong> {orderInfo.Name}
+                     &nbsp;
+                </p>
+
+                <p>
+                    <strong> Total Amount: </strong> {orderInfo.Total_Amount__c}
+                     </p>
+                     
+                     <p> 
+                        <strong>Shipping address : </strong>
+                         {orderInfo.subTotal__c}
+                     </p>
+                     <p>
+                        <strong> Shipping Address: </strong>
+                        &nbsp;
+                        <lightning-formatted-address
+                            street={orderInfo.Shipping_Address__r.Street__c}
+                            city={orderInfo.Shipping_Address__r.City__c}
+                            country={orderInfo.Shipping_Address__r.Country__c}
+                            province={orderInfo.Shipping_Address__r.State__c}
+                            postal-code={orderInfo.Shipping_Address__r.Postal_Code__c}
+                            format-address="true"
+                            disabled>
+                        </lightning-formatted-address>
+                     </p>
+            </template>
+        </div>
+
+
+        <div class="slds-m-top_small">
+            <template if:true={orderItems}>
+                <strong> Related Order Items </strong>
+                &nbsp;
+
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Name">Item Name</div>
+                            </th>
+
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Order Quantity">Order Quantity</div>
+                            </th>
+
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Item Price">Item Price</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <template for:each={orderItems} for:item="item">
+                        <tr class="slds-hint-parent" key={item.Id}>
+                            <th data-label="Opportunity Name" scope="row">
+                                <div class="slds-truncate">
+                                    <a href="javascript:void(0);" tabindex="-1">
+                                        {item.Beer__r.Name}
+                                    </a>
+                                </div>
+                                </th>
+                                <td data-label="Account Name">
+                                    <div class="slds-truncate"> {item.Ordered_Quantity__c} </div>     
+                                </td>
+
+                                <td data-label="Close Date">
+                                    <div class="slds-truncate"> {item.Item_Price__c} </div>     
+                                </td>
+                        </tr>
+                    </template>
+                </table>
+            </template>
+        </div>
+    </lightning-card>
+</template>

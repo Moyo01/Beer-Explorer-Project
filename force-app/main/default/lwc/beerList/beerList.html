@@ -1,0 +1,41 @@
+<template>
+    <div style="background: white; border-radius: 10px;">
+        
+        <div style="border: 2px solid red; width: 30px; height: 30px; border-radius: 50% ; 
+                margin-left: 1313px;
+                margin-bottom: -30px;
+                text-align: center;
+                font-size: 19px;"
+            > 
+            <strong class="slds-m-top_small slds-m-top_medium" style="text-align:center; vertical-align:center;">{itemsInCart}</strong>
+        </div>
+        <div style="margin-left: 1300px;" >
+            <a href="JavaScript:void(0)" onclick={navigateToCartDetail}>
+                <img src={cart} height="60" width="80" />
+            </a>
+        </div>    
+       
+        <div class="slds-m-around_medium">
+
+        <div class="slds-m-left_small slds-m-right_small slds-m-bottom_small">
+            <c-beer-search onsearch={handleSearch}></c-beer-search>
+        </div>
+
+
+            
+        <div>
+            <template if:true={beerRecords}>
+                <div  class="slds-grid slds-wrap">
+                    <template for:each={beerRecords} for:item="beer">
+                        <div class="slds-col slds-size_1-of-3"  key={beer.Id}>
+                            <c-beer-tile beer-records={beer} oncart={addToCart}></c-beer-tile> 
+                            </div>
+                    </template>
+                </div>
+               
+            </template>
+           
+        </div>
+    </div>
+</div>
+</template>
