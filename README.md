@@ -1,6 +1,26 @@
 # 💫 About Me:
-I am Moyo Owolabi.<br>I am a salesforce Administrator with over 7 years work experience.<br>I carry out salesforce configuration thereby developing work flows, apex programing, html and javacript programming and system Integration on salesforce.<br>My LinkedIn Profile here https://www.linkedin.com/in/owolabimoyo/
+🍺 Global Beer App – Salesforce eCommerce Solution
+🔍 Project Overview
+The Global Beer App is a custom-built eCommerce solution developed entirely within Salesforce. It demonstrates how the Salesforce platform can support a seamless customer journey from product exploration to checkout using custom data models and Lightning Web Components (LWC).
 
+🛠️ Key Contributions
+Custom Data Architecture: Designed and implemented objects including Beer Explorer, Cart, Order, Coupon, and Address Book to manage the full purchasing lifecycle.
+
+LWC Development: Built dynamic Lightning Web Components to power real-time beer discovery, filtering, cart management, and order creation—improving UX and accelerating the checkout process.
+
+🧰 Technologies Used
+Salesforce Lightning Web Components (LWC)
+
+Apex (Server-side logic)
+
+SOQL (Salesforce Object Query Language)
+
+Custom Objects & Relationships
+
+Salesforce Security Model (Profiles, Sharing Rules)
+
+📈 Business Relevance
+This project showcases the capability of Salesforce as a scalable eCommerce backend and highlights how tailored user experiences can be built directly on the platform—ideal for demonstrating practical Salesforce development and architecture skills to prospective employers.
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/Moyosore Owolabi) 
